@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ExEnviandoObjeto</string>
+    <string name="ma_et_login">Seu Login</string>
+    <string name="ma_et_senha">Sua Senha</string>
+    <string name="ma_btn_entra">Loga</string>
+    <string name="t2_btn_cancela">Cancelar</string>
+    <string name="t2_btn_ok">Confirma</string>
+    <string name="t2_et_cvv">Seu CVV...</string>
+    <string name="ma_rd_masculino">Masculino</string>
+    <string name="ma_rd_feminino">Feminino</string>
+</resources>
