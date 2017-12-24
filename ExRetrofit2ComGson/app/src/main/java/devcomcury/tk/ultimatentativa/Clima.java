@@ -9,7 +9,7 @@ public class Clima {
     private String estacao;
     private String bairro;
     private String latitude;
-    private String longetude;
+    private String longitude;
     private String data;
     private String pressao;
     private String direcaoVento;
@@ -23,7 +23,7 @@ public class Clima {
         this.estacao = estacao;
         this.bairro = bairro;
         this.latitude = latitude;
-        this.longetude = longetude;
+        this.longitude = longetude;
         this.data = data;
         this.pressao = pressao;
         this.direcaoVento = direcaoVento;
@@ -55,13 +55,9 @@ public class Clima {
         this.latitude = latitude;
     }
 
-    public String getLongetude() {
-        return longetude;
-    }
+    public String getLongitude() {return longitude;}
 
-    public void setLongetude(String longetude) {
-        this.longetude = longetude;
-    }
+    public void setLongitude(String longitude) {this.longitude = longitude;}
 
     public String getData() {
         return data;
@@ -109,7 +105,7 @@ public class Clima {
                 "estacao='" + estacao + '\'' +
                 ", bairro='" + bairro + '\'' +
                 ", latitude='" + latitude + '\'' +
-                ", longetude='" + longetude + '\'' +
+                ", longetude='" + longitude + '\'' +
                 ", data='" + data + '\'' +
                 ", pressao='" + pressao + '\'' +
                 ", direcaoVento='" + direcaoVento + '\'' +

@@ -10,8 +10,9 @@ import retrofit2.http.Path;
  */
 
 public interface APIRetrofitService {
-    String BASE_URL = "https://metroclimaestacoes.procempa.com.br/metroclima/seam/resource/rest/externalRest/ultimaLeitura";
+    String BASE_URL = "https://metroclimaestacoes.procempa.com.br/metroclima/seam/resource/rest/externalRest/";
 
-    @GET()
+    @GET("ultimaLeitura")
     Call<List<Clima>> getClimaCall();
 }
+

@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 /**
@@ -14,13 +16,17 @@ import java.util.ArrayList;
  */
 
 public class ClimaAdapter extends RecyclerView.Adapter {
+
     private Context context;
     private ArrayList<Clima> climas;
     private static ClickListener clickListener;
 
-    public ClimaAdapter(Context context,
-                        ArrayList<Clima> climas) {
+    public ClimaAdapter(Context context, ArrayList<Clima> climas) {
         this.context = context;
+        this.climas = climas;
+    }
+
+    public void setClimas(ArrayList<Clima> climas) {
         this.climas = climas;
     }
 
@@ -35,8 +41,15 @@ public class ClimaAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ViewHolder hold = (ViewHolder) holder;
-            Clima c = new Clima();
-            hold.tvEstacao.setText(c.getEstacao());
+        Clima c = climas.get(position);
+        hold.tvEstacao.setText(c.getEstacao());
+        hold.tvSensacaoTermica.setText(c.getSensacaoTermica());
+        hold.tvVelocidadeVento.setText(c.getVelocidadeVento());
+        hold.tvPressao.setText(c.getPressao());
+        hold.tvLongitude.setText(c.getLongitude());
+        hold.tvLatitude.setText(c.getLatitude());
+        hold.tvBairro.setText(c.getBairro());
+        hold.tvDirecaoVento.setText(c.getDirecaoVento());
     }
 
     @Override
@@ -48,14 +61,27 @@ public class ClimaAdapter extends RecyclerView.Adapter {
             implements View.OnClickListener, View.OnLongClickListener {
 
         private final TextView tvEstacao;
+        private final TextView tvDirecaoVento;
+        private final TextView tvBairro;
+        private final TextView tvPressao;
+        private final TextView tvVelocidadeVento;
+        private final TextView tvSensacaoTermica;
+        private final TextView tvLongitude;
+        private final TextView tvLatitude;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
-
+            tvDirecaoVento = itemView.findViewById(R.id.lc_tv_direcaoVento);
             tvEstacao = itemView.findViewById(R.id.lc_tv_estacao);
+            tvBairro = itemView.findViewById(R.id.lc_tv_bairro);
+            tvLatitude = itemView.findViewById(R.id.lc_tv_latitude);
+            tvLongitude = itemView.findViewById(R.id.lc_tv_longetude);
+            tvPressao = itemView.findViewById(R.id.lc_tv_pressao);
+            tvVelocidadeVento = itemView.findViewById(R.id.lc_tv_velocidadeVento);
+            tvSensacaoTermica = itemView.findViewById(R.id.lc_tv_sensacaoTermica);
         }
 
         @Override
@@ -73,6 +99,7 @@ public class ClimaAdapter extends RecyclerView.Adapter {
         void onItemClick(int position, View v);
         void onItemLongClick(int position, View v);
     }
+
     public void setOnItemClickListener(ClickListener clickListener){
         ClimaAdapter.clickListener = clickListener;
     }
