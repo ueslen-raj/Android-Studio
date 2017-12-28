@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="devcomcury.tk.exmenunativo.MainActivity">
+    <item
+        android:id="@+id/menu_tela1"
+        android:orderInCategory="300"
+        android:title="Segunda Tela"
+        android:icon="@drawable/ic_feedback_black_24dp"
+        app:showAsAction="always" />
+    <item android:title="Contact"
+        android:orderInCategory="200"/>
+    <item android:title="Support"
+        android:orderInCategory="100"/>
+</menu>
