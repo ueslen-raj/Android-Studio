@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ExChatViaFireBase</string>
+    <string name="ma_et_chat" >Digite Aqui...</string>
+    <string name="ma_btn_enviar">Enviar</string>
+</resources>
