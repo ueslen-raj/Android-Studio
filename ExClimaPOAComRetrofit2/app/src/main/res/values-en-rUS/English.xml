@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ClimatePoa</string>
+    //Tela Detalhe...
+    <string name="td_tv_temperaturaMin">minimum temperature: </string>
+    <string name="td_tv_temperaturaMax">maximum temperature: </string>
+    <string name="td_tv_DirecaoVento">Direction Wind: </string>
+    <string name="td_tv_Bairro">Neighborhood: </string>
+    <string name="td_tv_Estacao">Season: </string>
+    <string name="td_tv_Latitude">Latitude: </string>
+    <string name="td_tv_Longitude">Longitude: </string>
+    <string name="td_tv_Pressao">Pressure: </string>
+    <string name="td_tv_VelocidadeDoVento">Wind speed: </string>
+    <string name="td_tv_SensacaoTermica">Thermal sensation: </string>
+    <string name="td_tv_ODiaEsta">The day is: </string>
+    //Tela Main
+    <string name="lc_tv_TemperaturaMin">min temperature: </string>
+    <string name="lc_tv_TemperaturaMax">temperature max: </string>
+    <string name="lc_tv_Bairro">Neighborhood: </string>
+</resources>
